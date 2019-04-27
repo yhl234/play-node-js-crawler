@@ -1,9 +1,9 @@
 const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
-const currency = function(){
+const firstBank = function(){
 	request({
-		url: "https://www.cathaybk.com.tw/cathaybk/personal/exchange/product/currency-billboard/?indexwidget",
+		url: "https://ibank.firstbank.com.tw/NetBank/7/0201.html",
 		method: "GET"
 	}, function(error, response, body){
 		if(error || !body){
@@ -11,16 +11,18 @@ const currency = function(){
 		}else{
 			const $ = cheerio.load(body);
 			const result = [];
-			const table_tr = $("#content-first-tab-01 table tbody tr");
+			const table_tr = $("#table1 tbody tr");
 			for(var i=0; i<table_tr.length;i++){
 				const table_td = table_tr.eq(i).find('td');
 				const country = table_td.eq(0).text().trim();
-				const bankBuy = table_td.eq(1).text(); 
-				const bankSell = table_td.eq(2).text(); 
+				const bankBuy = table_td.eq(2).text().trim();
+				const bankSell = table_td.eq(3).text().trim(); 
 				result.push(Object.assign({country,bankBuy,bankSell}))
 			}
 			console.log(result);
+			fs.writeFileSync("firstBank.json", JSON.stringify(result));
+
 		}
 	})
 }
-currency();
+firstBank();
