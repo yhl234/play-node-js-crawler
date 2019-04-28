@@ -1,6 +1,8 @@
 {
 	"builds": [
-	  { "src": "*.html", "use": "@now/static" },
-	  { "src": "date.js", "use": "@now/node" }
+	{ "src": "firstBank.js", "use": "@now/node" },
+	{ "src": "index.js", "use": "@now/node" },
+	{ "src": "cathayBank.js", "use": "@now/node" },
+	{ "src": "bankOfTaiwan.js", "use": "@now/node" }
 	]
   }
