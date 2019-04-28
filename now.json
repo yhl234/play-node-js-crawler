@@ -1,5 +1,5 @@
 {
-	"name": "node telebot",
+	"name": "play-node-js-crawler",
 	"version": 2,
 	"builds": [{ "src": "*.js", "use": "@now/node" }]
 }
