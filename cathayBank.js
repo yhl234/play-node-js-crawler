@@ -29,3 +29,4 @@ const cathayBank = function(){
 	})
 }
 cathayBank();
+setInterval(cathayBank, 60 * 60 * 1000);

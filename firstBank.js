@@ -27,3 +27,4 @@ const firstBank = function(){
 	})
 }
 firstBank();
+setInterval(firstBank, 60 * 60 * 1000);

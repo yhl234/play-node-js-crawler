@@ -27,3 +27,4 @@ const bankOfTaiwan = function(){
 	})
 }
 bankOfTaiwan();
+setInterval(bankOfTaiwan, 60 * 60 * 1000);
