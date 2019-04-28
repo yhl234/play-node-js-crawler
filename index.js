@@ -1,6 +1,19 @@
 const TelegramBot = require('node-telegram-bot-api'); 
 const token ='629183766:AAEly16j_pBBO2VHtzsnxkeGnLJ5ZScrDGo';
-const bot = new TelegramBot(token, {polling: true});
+// const bot = new TelegramBot(token, {polling: true});
+
+let bot;
+
+if (env === 'production') {
+  const webHook = { port: process.env.PORT || 443 };
+  const url = process.env.APP_URL || 'Your App URL.';
+
+  bot = new TelegramBot(token, { webHook });
+  bot.setWebHook(`${url}/bot${token}`); // In here for setting webHook
+} else {
+  bot = new TelegramBot(token, { polling: true }); // On devlopment mode
+}
+
 const fs = require('fs');
 let bank = '國泰世華';
 let rawData = fs.readFileSync('cathayBank.json');  
