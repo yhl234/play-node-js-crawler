@@ -1,8 +1,5 @@
 {
-	"builds": [
-	{ "src": "firstBank.js", "use": "@now/node" },
-	{ "src": "index.js", "use": "@now/node" },
-	{ "src": "cathayBank.js", "use": "@now/node" },
-	{ "src": "bankOfTaiwan.js", "use": "@now/node" }
-	]
-  }
+	"name": "node telebot",
+	"version": 2,
+	"builds": [{ "src": "*.js", "use": "@now/node" }]
+}

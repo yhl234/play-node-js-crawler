@@ -14,6 +14,7 @@ if (env === 'production') {
   bot = new TelegramBot(token, { polling: true }); // On devlopment mode
 }
 
+
 const fs = require('fs');
 let bank = '國泰世華';
 let rawData = fs.readFileSync('cathayBank.json');  
