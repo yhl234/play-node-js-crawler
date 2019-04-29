@@ -4,14 +4,15 @@
   "description": "This is a telegram bot which shows some currency base on New Taiwanese dollar",
   "main": "index.js",
   "scripts": {
-	"start": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yhl234/play-node-js-crawler.git"
   },
   "keywords": [
-    "telegram", "bot" 
+    "telegram",
+    "bot"
   ],
   "author": "Louis Lee",
   "license": "ISC",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/yhl234/,play-node-js-crawler#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^7.0.0",
     "fs": "0.0.1-security",
     "node-telegram-bot-api": "^0.30.0",
     "request": "^2.88.0"

@@ -1,3 +1,4 @@
+require('dotenv').config();
 require(__dirname+ '/src/bot');
 require(__dirname+ '/src/bankOfTaiwan');
 require(__dirname+ '/src/cathayBank');
