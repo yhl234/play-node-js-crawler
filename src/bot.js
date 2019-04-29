@@ -17,7 +17,7 @@ const bot = new TelegramBot(token, {polling: true});
 
 const fs = require('fs');
 let bank = '國泰世華';
-let rawData = fs.readFileSync('./src/cathayBank.json');  
+let rawData = fs.readFileSync('src/cathayBank.json');  
 let currency = JSON.parse(rawData);
 
 // start
