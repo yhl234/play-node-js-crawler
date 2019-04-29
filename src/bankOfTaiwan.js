@@ -21,7 +21,7 @@ const bankOfTaiwan = function(){
 				result.push(Object.assign({country,bankBuy,bankSell}))
 			}
 			console.log(result);
-			fs.writeFileSync("./src/bankOfTaiwan.json", JSON.stringify(result));
+			fs.writeFileSync(__dirname+ "/bankOfTaiwan.json", JSON.stringify(result));
 
 		}
 	})

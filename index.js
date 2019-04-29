@@ -1,4 +1,4 @@
-require('./src/bot');
-require('./src/bankOfTaiwan');
-require('./src/cathayBank');
-require('./src/firstBank');
+require(__dirname+ '/src/bot');
+require(__dirname+ '/src/bankOfTaiwan');
+require(__dirname+ '/src/cathayBank');
+require(__dirname+ '/src/firstBank');
