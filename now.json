@@ -1,7 +1,7 @@
 {
 	"name": "play-node-js-crawler",
 	"version": 2,
-	"builds": [{ "src": "*.js", "use": "@now/node" }, 
-		{"src": "*.json", "use": "@now/static-build" }
+	"builds": [
+		{ "src": "*.js", "use": "@now/node" }
 	]
 }
