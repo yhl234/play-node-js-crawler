@@ -4,6 +4,7 @@
   "description": "This is a telegram bot which shows some currency base on New Taiwanese dollar",
   "main": "index.js",
   "scripts": {
+	"start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
     "fs": "0.0.1-security",
     "node-telegram-bot-api": "^0.30.0",
     "request": "^2.88.0"
+  },
+  "engines": {
+    "node": "12.0.0"
   }
 }
