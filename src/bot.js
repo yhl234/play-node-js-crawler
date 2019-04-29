@@ -1,4 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api'); 
+const token = process.env.BOT_TOKEN;
 // const token ='629183766:AAEly16j_pBBO2VHtzsnxkeGnLJ5ZScrDGo';
 // const bot = new TelegramBot(token, {polling: true});
 const env = process.env.NODE_ENV || 'development';
@@ -7,7 +8,7 @@ let bot;
 
 if (env === 'production') {
   const webHook = { port: process.env.PORT || 443 };
-  const url = process.env.APP_URL || 'https://play-node-js-crawler-git-master.yhl234.now.sh';
+  const url = process.env.APP_URL || 'https://play-node-js-crawler-git-master.yhl234.now.sh:443';
 
   bot = new TelegramBot(token, { webHook });
   bot.setWebHook(`${url}/bot${token}`); // In here for setting webHook
