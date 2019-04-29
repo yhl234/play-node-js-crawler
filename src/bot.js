@@ -32,18 +32,18 @@ bot.on('message', (msg) => {
 	
 	if (msg.text.toString().includes('國泰世華')){
 		bank = '國泰世華';
-		rawData = fs.readFileSync('./src/cathayBank.json');  
+		rawData = fs.readFileSync(__dirname +'/cathayBank.json');  
 		currency = JSON.parse(rawData);  
 		bot.sendMessage(msg.chat.id, "資料庫變更為國泰世華");
 	} else if(msg.text.toString().includes('第一銀行')){
 		bank = '第一銀行';
-		rawData = fs.readFileSync('./src/firstBank.json');  
+		rawData = fs.readFileSync(__dirname +'/firstBank.json');  
 		currency = JSON.parse(rawData); 
 		bot.sendMessage(msg.chat.id, "資料庫變更為第一銀行");
  
 	} else if(msg.text.toString().includes('台灣銀行')){
 		bank = '台灣銀行';
-		rawData = fs.readFileSync('./src/bankOfTaiwan.json');  
+		rawData = fs.readFileSync(__dirname +'/bankOfTaiwan.json');  
 		currency = JSON.parse(rawData);  
 		bot.sendMessage(msg.chat.id, "資料庫變更為台灣銀行");
 
