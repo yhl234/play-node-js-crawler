@@ -57,17 +57,17 @@ bot.on('message', (msg) => {
 		var CAD = "cad";
 		if (msg.text.toString().toLowerCase().includes(CAD))
 		{
-			bot.sendMessage(msg.chat.id, bank + "今天加幣匯率是\n銀行買進\n" + currency[1].bankBuy +'\n銀行賣出\n'+ currency[0].bankSell);
+			bot.sendMessage(msg.chat.id, bank + "今天加幣匯率是\n銀行買進\n" + currency[1].bankBuy +'\n銀行賣出\n'+ currency[1].bankSell);
 		}
 		var CNY = "cny";
 		if (msg.text.toString().toLowerCase().includes(CNY))
 		{
-			bot.sendMessage(msg.chat.id, bank + "今天人民幣匯率是\n銀行買進\n" + currency[2].bankBuy +'\n銀行賣出\n'+ currency[0].bankSell);
+			bot.sendMessage(msg.chat.id, bank + "今天人民幣匯率是\n銀行買進\n" + currency[2].bankBuy +'\n銀行賣出\n'+ currency[2].bankSell);
 		}
 		var JPY = "jpy";
 		if (msg.text.toString().toLowerCase().includes(JPY))
 		{
-			bot.sendMessage(msg.chat.id, bank + "今天日幣匯率是\n銀行買進\n" + currency[3].bankBuy +'\n銀行賣出\n'+ currency[0].bankSell);
+			bot.sendMessage(msg.chat.id, bank + "今天日幣匯率是\n銀行買進\n" + currency[3].bankBuy +'\n銀行賣出\n'+ currency[3].bankSell);
 		}
 	}else{
 		bot.sendMessage(msg.chat.id,"請先選擇銀行");
