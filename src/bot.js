@@ -8,7 +8,7 @@ let bot;
 
 if (env === 'production') {
   const webHook = { port: process.env.PORT || 443 };
-  const url = process.env.APP_URL || 'https://play-node-js-crawler-git-master.yhl234.now.sh:443';
+  const url = process.env.APP_URL || 'https://play-node-js-crawler-git-master.yhl234.now.sh';
 
   bot = new TelegramBot(token, { webHook });
   bot.setWebHook(`${url}/bot${token}`); // In here for setting webHook
