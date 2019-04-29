@@ -23,7 +23,7 @@ const cathayBank = function(){
 			}
 			console.log(dataTime);
 			console.log(result);
-			fs.writeFileSync("cathayBank.json", JSON.stringify(result));
+			fs.writeFileSync("./src/cathayBank.json", JSON.stringify(result));
 
 		}
 	})

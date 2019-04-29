@@ -21,7 +21,7 @@ const firstBank = function(){
 				result.push(Object.assign({country,bankBuy,bankSell}))
 			}
 			console.log(result);
-			fs.writeFileSync("firstBank.json", JSON.stringify(result));
+			fs.writeFileSync("./src/firstBank.json", JSON.stringify(result));
 
 		}
 	})
